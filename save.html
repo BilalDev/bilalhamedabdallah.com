@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THREEJS</title>
+  <link rel="stylesheet" href="css/bha.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
+    .bha-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .bha-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  </style>
+</head>
+<body class="bha-black">
+  <div id="show-site">
+    <h1>Type Konami code.</h1>
+    <hr style="width:400px" class="bha-opacity">
+    <h6 id="show-site-without-game" class="bha-button bha-light-grey bha-padding-large bha-section">
+      Nope.
+    </h6>
+  </div>
+
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="bha-sidebar bha-bar-block bha-small bha-hide-small bha-center bha-hide-all" id="myNavbarBig">
+    <!-- Avatar image in top left corner -->
+    <img src="images/avatar_smoke.jpg" style="width:100%">
+    <a href="#" class="bha-bar-item bha-button bha-padding-large bha-black">
+      <i class="fa fa-home bha-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="#about" class="bha-bar-item bha-button bha-padding-large bha-hover-black">
+      <i class="fa fa-user bha-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+    <a href="#photos" class="bha-bar-item bha-button bha-padding-large bha-hover-black">
+      <i class="fa fa-eye bha-xxlarge"></i>
+      <p>PHOTOS</p>
+    </a>
+    <a href="#contact" class="bha-bar-item bha-button bha-padding-large bha-hover-black">
+      <i class="fa fa-envelope bha-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+    <a id="game-nav" href="#game" class="bha-bar-item bha-button bha-padding-large bha-hover-black">
+      <i class="fa fa-gamepad bha-xxlarge"></i>
+      <p>GAME</p>
+    </a>    
+  </nav>
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="bha-top bha-hide-large bha-hide-medium bha-hide-all" id="myNavbar">
+    <div class="bha-bar bha-black bha-opacity bha-hover-opacity-off bha-center bha-small">
+      <a href="#" class="bha-bar-item bha-button" style="width:25% !important">HOME</a>
+      <a href="#about" class="bha-bar-item bha-button" style="width:25% !important">ABOUT</a>
+      <a href="#photos" class="bha-bar-item bha-button" style="width:25% !important">PHOTOS</a>
+      <a href="#contact" class="bha-bar-item bha-button" style="width:25% !important">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="bha-padding-large bha-hide-all" id="main">
+    <!-- Header/Home -->
+    <header class="bha-container bha-padding-32 bha-center bha-black" id="home">
+      <h1 class="bha-jumbo"><span class="bha-hide-small">I'm</span> Bilal Hamed Abdallah.</h1>
+      <p>IT Engineer and JavaScript lover.</p>
+      <img src="images/man_smoke.jpg" alt="boy" class="bha-image" width="992" height="1108">
+    </header>
+
+    <!-- About Section -->
+    <div class="bha-content bha-justify bha-text-grey bha-padding-64" id="about">
+      <h2 class="bha-text-light-grey">Bilal Hamed Abdallah</h2>
+      <hr style="width:200px" class="bha-opacity">
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <h3 class="bha-padding-16 bha-text-light-grey">My Skills</h3>
+      <p class="bha-wide">JavaScript</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:85%"></div>
+      </div>
+      <p class="bha-wide">Angular</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:75%"></div>
+      </div>
+      <p class="bha-wide">React</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:55%"></div>
+      </div>
+      <p class="bha-wide">Node</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:75%"></div>
+      </div>
+      <p class="bha-wide">PHP</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:80%"></div>
+      </div>
+      <p class="bha-wide">JAVA</p>
+      <div class="bha-white">
+        <div class="bha-dark-grey" style="height:28px;width:75%"></div>
+      </div>
+      <br>
+      
+      <div class="bha-row bha-center bha-padding-16 bha-section bha-light-grey">
+        <div class="bha-quarter bha-section">
+          <span class="bha-xlarge">11+</span><br>
+          Partners
+        </div>
+        <div class="bha-quarter bha-section">
+          <span class="bha-xlarge">55+</span><br>
+          Projects Done
+        </div>
+        <div class="bha-quarter bha-section">
+          <span class="bha-xlarge">89+</span><br>
+          Happy Clients
+        </div>
+        <div class="bha-quarter bha-section">
+          <span class="bha-xlarge">150+</span><br>
+          Meetings
+        </div>
+      </div>
+
+      <a href="public/CV Bilal HAMED ABDALLAH.pdf" target="_blank" class="bha-button bha-light-grey bha-padding-large bha-section">
+        <i class="fa fa-download"></i> Download Resume
+      </a>
+      
+      <!-- Grid for pricing tables -->
+      <h3 class="bha-padding-16 bha-text-light-grey">My Price</h3>
+      <div class="bha-row-padding" style="margin:0 -16px">
+        <div class="bha-half bha-margin-bottom">
+          <ul class="bha-ul bha-white bha-center bha-opacity bha-hover-opacity-off">
+            <li class="bha-dark-grey bha-xlarge bha-padding-32">Basic</li>
+            <li class="bha-padding-16">Web Design</li>
+            <li class="bha-padding-16">Photography</li>
+            <li class="bha-padding-16">5GB Storage</li>
+            <li class="bha-padding-16">Mail Support</li>
+            <li class="bha-padding-16">
+              <h2>$ 10</h2>
+              <span class="bha-opacity">per month</span>
+            </li>
+            <li class="bha-light-grey bha-padding-24">
+              <button class="bha-button bha-white bha-padding-large bha-hover-black">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bha-half">
+          <ul class="bha-ul bha-white bha-center bha-opacity bha-hover-opacity-off">
+            <li class="bha-dark-grey bha-xlarge bha-padding-32">Pro</li>
+            <li class="bha-padding-16">Web Design</li>
+            <li class="bha-padding-16">Photography</li>
+            <li class="bha-padding-16">50GB Storage</li>
+            <li class="bha-padding-16">Endless Support</li>
+            <li class="bha-padding-16">
+              <h2>$ 25</h2>
+              <span class="bha-opacity">per month</span>
+            </li>
+            <li class="bha-light-grey bha-padding-24">
+              <button class="bha-button bha-white bha-padding-large bha-hover-black">Sign Up</button>
+            </li>
+          </ul>
+        </div>
+      <!-- End Grid/Pricing tables -->
+      </div>
+      
+      <!-- Testimonials -->
+      <h3 class="bha-padding-24 bha-text-light-grey">My Reputation</h3>  
+      <img src="images/bandmember.jpg" alt="Avatar" class="bha-left bha-circle bha-margin-right" style="width:80px">
+      <p><span class="bha-large bha-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+      <p>Jane Doe saved us from a web disaster.</p><br>
+      
+      <img src="images/avatar_g2.jpg" alt="Avatar" class="bha-left bha-circle bha-margin-right" style="width:80px">
+      <p><span class="bha-large bha-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+      <p>No one is better than Jane Doe.</p>
+    <!-- End About Section -->
+    </div>
+    
+    <!-- Portfolio Section -->
+    <div class="bha-padding-64 bha-content" id="photos">
+      <h2 class="bha-text-light-grey">My Photos</h2>
+      <hr style="width:200px" class="bha-opacity">
+
+      <!-- Grid for photos -->
+      <div class="bha-row-padding" style="margin:0 -16px">
+        <div class="bha-half">
+          <img src="images/wedding.jpg" style="width:100%">
+          <img src="images/rocks.jpg" style="width:100%">
+          <img src="images/sailboat.jpg" style="width:100%">
+        </div>
+
+        <div class="bha-half">
+          <img src="images/underwater.jpg" style="width:100%">
+          <img src="images/chef.jpg" style="width:100%">
+          <img src="images/wedding.jpg" style="width:100%">
+          <img src="images/p6.jpg" style="width:100%">
+        </div>
+      <!-- End photo grid -->
+      </div>
+    <!-- End Portfolio Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="bha-padding-64 bha-content bha-text-grey" id="contact">
+      <h2 class="bha-text-light-grey">Contact Me</h2>
+      <hr style="width:200px" class="bha-opacity">
+
+      <div class="bha-section">
+        <p><i class="fa fa-map-marker fa-fw bha-text-white bha-xxlarge bha-margin-right"></i> Chicago, US</p>
+        <p><i class="fa fa-phone fa-fw bha-text-white bha-xxlarge bha-margin-right"></i> Phone: +00 151515</p>
+        <p><i class="fa fa-envelope fa-fw bha-text-white bha-xxlarge bha-margin-right"> </i> Email: mail@mail.com</p>
+      </div><br>
+      <p>Lets get in touch. Send me a message:</p>
+
+      <form action="/action_page.php" target="_blank">
+        <p><input class="bha-input bha-padding-16" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="bha-input bha-padding-16" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="bha-input bha-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="bha-input bha-padding-16" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="bha-button bha-light-grey bha-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    <!-- End Contact Section -->
+    </div>
+
+    <div class="bha-small bha-hide-small" id="game">
+      
+    </div>
+    
+      <!-- Footer -->
+    <footer class="bha-content bha-padding-64 bha-text-grey bha-xlarge">
+      <i class="fa fa-facebook-official bha-hover-opacity"></i>
+      <i class="fa fa-instagram bha-hover-opacity"></i>
+      <i class="fa fa-snapchat bha-hover-opacity"></i>
+      <i class="fa fa-pinterest-p bha-hover-opacity"></i>
+      <i class="fa fa-twitter bha-hover-opacity"></i>
+      <i class="fa fa-linkedin bha-hover-opacity"></i>
+      <p class="bha-medium">Powered by bilalhamedabdallah</p>
+    <!-- End footer -->
+    </footer>
+
+  <!-- END PAGE CONTENT -->
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src="js/konami_code.js"></script>
+  <script src="game/js/three.js"></script>
+  <script src="game/js/helpers.js"></script>
+  <script src="game/js/render_line.js"></script>
+  
+</body>
+</html>

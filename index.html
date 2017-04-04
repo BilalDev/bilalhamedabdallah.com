@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THREEJS</title>
+  <link rel="stylesheet" href="css/bha.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Open Sans", sans-serif}
+    .bha-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .bha-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  </style>
+</head>
+<body class="bha-black">
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src="game/js/three.js"></script>
+  <script src="game/js/helpers.js"></script>
+  <script src="game/js/render_line.js"></script>
+  <script type="text/javascript">
+    startGame();
+  </script>
+</body>
+</html>
