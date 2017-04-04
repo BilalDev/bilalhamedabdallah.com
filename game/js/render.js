@@ -8,6 +8,7 @@ let startGame = () => {
   }
   let renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setSize(siteWidth, window.innerHeight);
+  renderer.setClearColor(0x111111);
 
   let el = document.getElementById('game');
   if (el) {
@@ -17,7 +18,7 @@ let startGame = () => {
     document.body.appendChild(renderer.domElement);
   }
 
-  let camera = new THREE.PerspectiveCamera(45, siteWidth / window.innerHeight, 1, 500);
+  let camera = new THREE.PerspectiveCamera(45, siteWidth / window.innerHeight, 1, 1000);
   camera.position.set(0, 0, 100);
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
